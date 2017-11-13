@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SessionManagerErrorCode Enum Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Enum/SessionManagerErrorCode" class="dashAnchor"></a>
+
+    <a title="SessionManagerErrorCode Enum Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          MobileSSOFramework Docs
+        </a>
+         (72% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">MobileSSOFramework Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      SessionManagerErrorCode Enum Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/IDTokenPayload.html">IDTokenPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/MobileSSO.html">MobileSSO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/s:C18MobileSSOFramework14MobileSSOError">MobileSSOError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/Session.html">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UserProfile.html">UserProfile</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/UserProfileNames.html">UserProfileNames</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Global Variables.html#/s:v18MobileSSOFramework25SessionManagerErrorDomainSS">SessionManagerErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/LoginState.html">LoginState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MobileSSOLoggingLevel.html">MobileSSOLoggingLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/PersonType.html">PersonType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SessionManagerErrorCode.html">SessionManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SessionStatus.html">SessionStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MobileSSOAppDelegate.html">MobileSSOAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SessionManagerDelegate.html">SessionManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:18MobileSSOFramework22EndSessionFlowCallback">EndSessionFlowCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:18MobileSSOFramework25SessionCompletionListener">SessionCompletionListener</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>SessionManagerErrorCode</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SessionManagerErrorCode</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                </div>
+              </div>
+            <p>All possible errors that can occur while managing sessions.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode23invalidAppDelegateErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/invalidAppDelegateError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode23invalidAppDelegateErrorFMS0_S0_">invalidAppDelegateError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The app&rsquo;s AppDelegate is not compliant with MobileSSO. The AppDelegate must implement 
+MobileSSOAppDelegate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">invalidAppDelegateError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode22serviceConfigLoadErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/serviceConfigLoadError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode22serviceConfigLoadErrorFMS0_S0_">serviceConfigLoadError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The service configuration could not be loaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">serviceConfigLoadError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode19authStateParseErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/authStateParseError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode19authStateParseErrorFMS0_S0_">authStateParseError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The auth state could not be parsed from the server response. This indicates a bug in either the 
+client or server code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">authStateParseError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode17tokenRequestErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/tokenRequestError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode17tokenRequestErrorFMS0_S0_">tokenRequestError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Token exchange request could not be created. This indicates a bug in MobileSSO framework.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">tokenRequestError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode20idTokenValidateErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/idTokenValidateError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode20idTokenValidateErrorFMS0_S0_">idTokenValidateError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The ID token did not validate.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">idTokenValidateError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode20userProfileLoadErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/userProfileLoadError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode20userProfileLoadErrorFMS0_S0_">userProfileLoadError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>User profile could not be loaded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">userProfileLoadError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode28sessionRefreshNoSessionErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/sessionRefreshNoSessionError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode28sessionRefreshNoSessionErrorFMS0_S0_">sessionRefreshNoSessionError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The session could not be refreshed because no session exists.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sessionRefreshNoSessionError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode24sessionRefreshOauthErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/sessionRefreshOauthError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode24sessionRefreshOauthErrorFMS0_S0_">sessionRefreshOauthError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The server rejected the refresh token. The refresh token is most probably expired.
+To re-login the user, use the <em>presentLogin</em> method of SessionManager.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sessionRefreshOauthError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode26sessionRefreshNetworkErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/sessionRefreshNetworkError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode26sessionRefreshNetworkErrorFMS0_S0_">sessionRefreshNetworkError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Network error occurred (e.g. no internet connection) while refreshing the session.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sessionRefreshNetworkError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode25sessionRefreshServerErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/sessionRefreshServerError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode25sessionRefreshServerErrorFMS0_S0_">sessionRefreshServerError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Server returned an error while refreshing the session. This might indicate a server issue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">sessionRefreshServerError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode26logoutErrorNoEndSessionURLFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/logoutErrorNoEndSessionURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode26logoutErrorNoEndSessionURLFMS0_S0_">logoutErrorNoEndSessionURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The service configuration did not contain an URL for ending the session.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">logoutErrorNoEndSessionURL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode23logoutErrorNetworkErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/logoutErrorNetworkError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode23logoutErrorNetworkErrorFMS0_S0_">logoutErrorNetworkError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Network error occurred (e.g. no internet connection) while trying to log out.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">logoutErrorNetworkError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode22logoutErrorServerErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/logoutErrorServerError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode22logoutErrorServerErrorFMS0_S0_">logoutErrorServerError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Server returned an error while logging out. This might indicate a server issue.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">logoutErrorServerError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO18MobileSSOFramework23SessionManagerErrorCode12unknownErrorFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/unknownError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO18MobileSSOFramework23SessionManagerErrorCode12unknownErrorFMS0_S0_">unknownError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>No idea what happened.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">unknownError</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="TODO" target="_blank" rel="external">Nixu</a>. All rights reserved. (Last updated: 2017-04-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

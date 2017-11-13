@@ -1,0 +1,236 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/MobileSSO.swift",
+      "line": 36,
+      "symbol": "MobileSSO.logFilename",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/MobileSSO.swift",
+      "line": 37,
+      "symbol": "MobileSSO.logFunctionName",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 84,
+      "symbol": "Session.userProfile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 121,
+      "symbol": "IDTokenPayload.authTimeRaw",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 123,
+      "symbol": "IDTokenPayload.authTime",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 137,
+      "symbol": "IDTokenPayload.inum",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 138,
+      "symbol": "IDTokenPayload.iss",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 139,
+      "symbol": "IDTokenPayload.aud",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 140,
+      "symbol": "IDTokenPayload.atHash",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 141,
+      "symbol": "IDTokenPayload.acr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 143,
+      "symbol": "IDTokenPayload.oxOpenIDConnectVersion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 144,
+      "symbol": "IDTokenPayload.oxValidationURI",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 145,
+      "symbol": "IDTokenPayload.personResourceId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 146,
+      "symbol": "IDTokenPayload.sub",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 148,
+      "symbol": "IDTokenPayload.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/Session.swift",
+      "line": 152,
+      "symbol": "IDTokenPayload.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 18,
+      "symbol": "MobileSSOAppDelegate.currentAuthFlow",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 116,
+      "symbol": "LoginState.configurationLoaded",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 117,
+      "symbol": "LoginState.safariWillAppear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 118,
+      "symbol": "LoginState.safariDidDisappear",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 119,
+      "symbol": "LoginState.tokensRequested",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 120,
+      "symbol": "LoginState.idTokenWillValidate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/SessionManager.swift",
+      "line": 121,
+      "symbol": "LoginState.userProfileWillLoad",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 56,
+      "symbol": "UserProfile.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 62,
+      "symbol": "UserProfile.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 72,
+      "symbol": "UserProfileNames",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 74,
+      "symbol": "UserProfileNames.sortKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 75,
+      "symbol": "UserProfileNames.surnames",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 76,
+      "symbol": "UserProfileNames.titles",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 77,
+      "symbol": "UserProfileNames.givenNames",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 78,
+      "symbol": "UserProfileNames.fullName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 80,
+      "symbol": "UserProfileNames.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/UserProfile.swift",
+      "line": 84,
+      "symbol": "UserProfileNames.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework"
+}

@@ -1,0 +1,12 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework/MobileSSOFramework/VITSessionManager.swift",
+      "line": 710,
+      "symbol": "VITSessionManager.deleteAllData()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/testi/work/mobilesso-sdk/MobileSSOFramework"
+}

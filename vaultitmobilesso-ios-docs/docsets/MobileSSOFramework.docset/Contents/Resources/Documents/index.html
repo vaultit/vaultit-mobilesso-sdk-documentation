@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MobileSSOFramework  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="MobileSSOFramework  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          MobileSSOFramework Docs
+        </a>
+         (72% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">MobileSSOFramework Reference</a>
+      <img class="carat" src="img/carat.png" />
+      MobileSSOFramework  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/IDTokenPayload.html">IDTokenPayload</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/MobileSSO.html">MobileSSO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:C18MobileSSOFramework14MobileSSOError">MobileSSOError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Session.html">Session</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/UserProfile.html">UserProfile</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/UserProfileNames.html">UserProfileNames</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Global Variables.html#/s:v18MobileSSOFramework25SessionManagerErrorDomainSS">SessionManagerErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LoginState.html">LoginState</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/MobileSSOLoggingLevel.html">MobileSSOLoggingLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/PersonType.html">PersonType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SessionManagerErrorCode.html">SessionManagerErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/SessionStatus.html">SessionStatus</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/MobileSSOAppDelegate.html">MobileSSOAppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SessionManagerDelegate.html">SessionManagerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:18MobileSSOFramework22EndSessionFlowCallback">EndSessionFlowCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Typealiases.html#/s:18MobileSSOFramework25SessionCompletionListener">SessionCompletionListener</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            
+            <a href='#mobilesso-framework-readme' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='mobilesso-framework-readme'>MobileSSO framework readme</h1>
+<a href='#configuration' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='configuration'>Configuration</h2>
+<a href='#download-and-install' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='download-and-install'>Download and install</h3>
+<a href='#add-to-a-new-project-or-to-a-project-not-using-cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='add-to-a-new-project-or-to-a-project-not-using-cocoapods'>Add to a new project or to a project not using CocoaPods</h4>
+
+<p><em>THIS SECTION IS A DRAFT, NOTHING IS YET AVAILABLE IN COCOAPODS</em></p>
+
+<p>The framework is distributed via CocoaPods. If your project does not already use CocoaPods for dependency management
+(most projects do), install it with RubyGems:</p>
+<pre class="highlight shell"><code>sudo gem install cocoapods
+</code></pre>
+
+<p>Then in your project&rsquo;s root folder run:</p>
+<pre class="highlight plaintext"><code>pod init
+</code></pre>
+
+<p>Modify the newly created Podfile by adding the following line:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'MobileSSOFramework'</span>
+</code></pre>
+
+<p>Finally, run:</p>
+<pre class="highlight shell"><code>pod install
+</code></pre>
+
+<p>This will download all dependencies and create a workspace file called <q>YourProject.xcworkspace</q>, which ties all the
+dependencies together. Open it up and build your project.</p>
+<a href='#add-to-a-project-already-using-cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='add-to-a-project-already-using-cocoapods'>Add to a project already using CocoaPods</h4>
+
+<p>Simply add the line</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'MobileSSOFramework'</span>
+</code></pre>
+
+<p>to your Podfile. Then run <code>pod install</code>. If your repositories are out-of-date, <code>pod update</code> might be required instead to locate the Pod.</p>
+<a href='#add-client-secret-in-the-build-script' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='add-client-secret-in-the-build-script'>Add client secret in the build script</h3>
+
+<p>To avoid saving sensitive keys to a git repository, you should create a file (named e.g. ClientSecret.env) file in the
+root folder of the application and add the following <q>Run script</q> phase to your project:</p>
+<pre class="highlight shell"><code><span class="nv">INFO_PLIST</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">TARGET_BUILD_DIR</span><span class="k">}</span><span class="s2">/</span><span class="k">${</span><span class="nv">INFO_PLIST_PATH</span><span class="k">}</span><span class="s2">"</span>
+<span class="nv">CLIENT_SECRET</span><span class="o">=</span><span class="sb">`</span>cat <span class="k">${</span><span class="nv">SCRIPT_INPUT_FILE_0</span><span class="k">}</span><span class="sb">`</span>
+/usr/libexec/Plistbuddy -c <span class="s2">"Set :MobileSSOClientSecret </span><span class="k">${</span><span class="nv">CLIENT_SECRET</span><span class="k">}</span><span class="s2">"</span> <span class="nv">$INFO_PLIST</span>
+</code></pre>
+
+<p>Also, add the file with the key as an input file to the script.</p>
+<a href='#required-config-to-info-plist' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='required-config-to-info-plist'>Required config to Info.plist</h3>
+
+<table><thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+<th>Example value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>MobileSSOClientId</td>
+<td>The client id string.</td>
+<td></td>
+</tr>
+<tr>
+<td>MobileSSOIssuerURL</td>
+<td>The URL of the GLUU authentication server.</td>
+<td></td>
+</tr>
+<tr>
+<td>CFBundleURLTypes</td>
+<td>This describes the custom URL schemes used by your app (should match the login and logout redirect URLs).</td>
+<td>URL Types: An array with one value: CFBundleURLSchemes (type array). CFBundleURLSchemes is again an array with the schemes (string type, e.g. <q>com.company.yourapp</q>)</td>
+</tr>
+<tr>
+<td>MobileSSOLoginRedirectURI</td>
+<td>A custom-schemed login redirect URI that will be captured  by your app and handled by MobileSSOFramework.  This is the URL the system Safari browser will redirect when login is successful  and it will be used to capture the event and dismiss the browser.</td>
+<td>com.company.yourapp://my_login_uri</td>
+</tr>
+<tr>
+<td>MobileSSOLogoutRedirectURI</td>
+<td>A custom-schemed redirect URI that will be captured by your app and  handled by MobileSSOFramework.This is the URL the system Safari  browser will redirect when logout is successful and it will be used to capture the  event and dismiss the browser.</td>
+<td>com.company.yourapp://my_logout_uri</td>
+</tr>
+<tr>
+<td>MobileSSOQvarnURL</td>
+<td>The Qvarn endpoint URL used to fetch data.</td>
+<td></td>
+</tr>
+<tr>
+<td>MobileSSOKeychainServiceName</td>
+<td>By default it is recommended to set this to the ${PRODUCT_BUNDLE_IDENTIFIER}  environment variable. This will resolve to e.g. <q>com.company.yourapp</q>.This will be used  to store the session to iOS keychain, so the session can be persisted and shared with apps  in the same keychain access group (see the next row).</td>
+<td>${PRODUCT_BUNDLE_IDENTIFIER}</td>
+</tr>
+<tr>
+<td>MobileSSOKeychainAccessGroup</td>
+<td>Sessions stored in the keychain can be shared with other apps in the same keychain access group. Go to the <q>Capabilities</q> tab of your project settings, enable keychain sharing and enter an access group name that is shared between all your apps. Then set this property as:$(AppIdentifierPrefix)group_namewhere <q>group_name</q> is the access group name you chose. The $(AppIdentifierPrefix) will resolve to your team id.</td>
+<td>$(AppIdentifierPrefix)example_group_name</td>
+</tr>
+<tr>
+<td>MobileSSOClientSecret</td>
+<td>This should be left empty in the Info.plist file. It will be added in the build phase.</td>
+<td></td>
+</tr>
+</tbody></table>
+<a href='#modify-your-appdelegate' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='modify-your-appdelegate'>Modify your AppDelegate</h3>
+
+<p>To make single sign-on flow work, you must make some changes to your AppDelegate.
+First, make your AppDelegate implement the <a href="Classes/MobileSSOAppDelegate.html">MobileSSOAppDelegate</a> protocol by adding the following property:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">currentAuthFlow</span><span class="p">:</span> <span class="kt">OIDAuthorizationFlowSession</span><span class="p">?</span>
+</code></pre>
+
+<p>Additionally, you will need to implement the following app delegate method with the following contents to correctly handle login and logout redirects:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">app</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">open</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationOpenURLOptionsKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="c1">// Sends the URL to the current authorization flow (if any) which will process it if it relates to</span>
+    <span class="c1">// an authorization response.</span>
+    <span class="k">if</span> <span class="n">currentAuthFlow</span><span class="p">?</span><span class="o">.</span><span class="nf">resumeAuthorizationFlow</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span> <span class="p">??</span> <span class="kc">false</span> <span class="p">{</span>
+        <span class="n">currentAuthFlow</span> <span class="o">=</span> <span class="kc">nil</span>
+        <span class="k">return</span> <span class="kc">true</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Your additional URL handling (if any) goes here.</span>
+
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#basic-framework-usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='basic-framework-usage'>Basic framework usage</h2>
+
+<p><em>NOTE: Code examples are in Swift (syntax compatible version 3.x - 4.0). The library fully supports Objective-C however for legacy projects. XCode is able to translate the API method declarations to Objective-C if the host project uses it.</em></p>
+<a href='#application-startup' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='application-startup'>Application startup</h3>
+
+<p>During application startup (preferably in didFinishLaunchingWithOptions) you should call <a href="Classes/MobileSSO.html">MobileSSO.initialize()</a>:</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="c1">// Initialize the MobileSSOFramework</span>
+    <span class="kt">MobileSSO</span><span class="o">.</span><span class="nf">initialize</span><span class="p">()</span>
+
+    <span class="c1">// Your other initialize code</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#check-if-a-valid-session-already-exists' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='check-if-a-valid-session-already-exists'>Check if a valid session already exists</h3>
+
+<p>The main class for handling sessions is the <a href="Classes/SessionManager.html">SessionManager</a>.
+It is recommended that you implement a <a href="Classes/SessionManagerDelegate.html">SessionManagerDelegate</a> and set it to the <a href="Classes/SessionManager.html">SessionManager</a> to stay updated of the
+session status. The protocol is:</p>
+<pre class="highlight swift"><code><span class="c1">/// Implement this protocol to get notified of changes to the session.</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SessionManagerDelegate</span><span class="p">:</span> <span class="kd">class</span> <span class="p">{</span>
+
+    <span class="c1">/// Will be called when the session state has been resolved. You should wait for this event before</span>
+    <span class="c1">/// presenting the login screen to an user to see if a valid session already exists.</span>
+    <span class="c1">///</span>
+    <span class="c1">/// - Parameter session: Will hold a valid session if one was resumed. If nil, then no session exists</span>
+    <span class="c1">///                      and you must present a login screen to the user with the *presentLogin* method.</span>
+    <span class="kd">func</span> <span class="nf">initialized</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">Session</span><span class="p">?)</span>
+
+    <span class="c1">/// User has completed the login flow succesfully and is now logged in.</span>
+    <span class="c1">///</span>
+    <span class="c1">/// - Parameter session: The session that started with the login.</span>
+    <span class="kd">func</span> <span class="nf">didCompleteLogin</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">Session</span><span class="p">)</span>
+
+    <span class="c1">/// A session was refreshed with a refresh token.</span>
+    <span class="c1">///</span>
+    <span class="c1">/// - Parameter session: The new refreshed session.</span>
+    <span class="kd">func</span> <span class="nf">didRefreshSession</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span> <span class="kt">Session</span><span class="p">)</span>
+
+    <span class="c1">/// User has completed the logout process succesfully. Any session data will be invalid.</span>
+    <span class="kd">func</span> <span class="nf">didLogout</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>You should wait for the <q>initialized</q> callback before initiating a manual login procedure. If a valid session exists (the user has logged in either previously with this app or any other app in the same authorisation group), it will be passed as the <q>session</q> parameter. If no valid session exists or if one could not be refreshed, the session parameter will be nil.</p>
+<a href='#starting-a-login-procedure' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='starting-a-login-procedure'>Starting a login procedure</h3>
+
+<p>If the session did not already exist, you make the user log in by calling the <a href="Classes/SessionManager.html">SessionManager.shared.presentLogin</a> method. You must pass a presenting ViewController and optionally pass a number of OpenID scopes depending on your needs. The OpenID and Profile scopes are automatically included.</p>
+
+<p>The presentLogin method will open up a SafariViewController and present the login screen to the user. After a successful login, the SessionManagerDelegate method didCompleteLogin will be called with the fresh session.</p>
+<a href='#logging-out' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='logging-out'>Logging out</h3>
+
+<p>Logging out is done with the SessionManager.shared.logout method of the shared SessionManager. You must supply a presenting ViewController as a parameter. There is also an optional completion listener. Note that calling the logout method will flash the SFSafariViewController on the screen, which may be distracting to the user.</p>
+<a href='#always-accessing-fresh-session-tokens' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='always-accessing-fresh-session-tokens'>Always accessing fresh session tokens</h3>
+
+<p>When you log in, you probably want to make authenticated calls afterwards. For this purpose you should always use the
+[SessionManager.shared.getFreshSession()] method. This ensures that for each call the access token will be auto-refreshed
+if needed. Also, in case of lost session the <a href="Classes/SessionManagerDelegate.html">SessionManagerDelegate</a> gets called and the app can respond appropriately.</p>
+<a href='#manually-refreshing-the-session' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manually-refreshing-the-session'>Manually refreshing the session</h3>
+
+<p>The MobileSSO framework will keep the session refreshed when necessary, but you can also automatically request a token refresh by simply calling the <a href="Classes/SessionManager.html">SessionManager.shared.refreshSession</a>.</p>
+<a href='#session-data' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='session-data'>Session data</h2>
+
+<p>TODO: Document all properties</p>
+
+<p>Session data is stored within a <a href="Classes/Session.html">Session</a> object. The object, in addition to raw token and
+expiration information, will parse the ID token (JWT token) into an easy to access <a href="Classes/SessionProfile.html">SessionProfile</a> object.</p>
+
+<p>NOTE: Session objects will get invalid after time, so you should not hold references to them after accessing the data.
+Instead, you are best of by simply calling either <a href="Classes/SessionManager.html">SessionManager.shared.getFreshSession()</a> or
+<a href="Classes/SessionManager.html">SessionManager.shared.currentSession</a> depending on your needs. You should always prefer the <em>getFreshSession</em> approach if you plan on using the access token.
+&ldquo;`</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2017 <a class="link" href="TODO" target="_blank" rel="external">Nixu</a>. All rights reserved. (Last updated: 2017-04-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
