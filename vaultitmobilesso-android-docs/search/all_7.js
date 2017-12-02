@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['logout',['logout',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1_session_manager.html#a3517daeead853278a0a6e24a01d37def',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]]
+  ['iat',['iat',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a95c0fd144974ed3422e206973e41a9c1',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
+  ['identityprovider',['IdentityProvider',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdentityProvider.html#a642beb4340fd52bee7796e4a0c765164',1,'org::vaultit::mobilesso::mobilessosdk::IdentityProvider']]],
+  ['identityprovider',['IdentityProvider',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdentityProvider.html',1,'org::vaultit::mobilesso::mobilessosdk']]],
+  ['idtokenpayload',['IdTokenPayload',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html',1,'org::vaultit::mobilesso::mobilessosdk']]],
+  ['idtokenpayload',['IdTokenPayload',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a0d644d6e2dec08cfb7851a11a139b6d9',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
+  ['init_5fauth_5fstate_5fparse_5ferror',['INIT_AUTH_STATE_PARSE_ERROR',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionError_1_1ErrorCode.html#a62ad2e0d344e00affd40e15a2adfad42',1,'org::vaultit::mobilesso::mobilessosdk::SessionError::ErrorCode']]],
+  ['init_5fexpired_5fsession_5ferror',['INIT_EXPIRED_SESSION_ERROR',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionError_1_1ErrorCode.html#ab05049d11e50a491607fed4b0c0fb26e',1,'org::vaultit::mobilesso::mobilessosdk::SessionError::ErrorCode']]],
+  ['init_5fnetwork_5ferror',['INIT_NETWORK_ERROR',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionError_1_1ErrorCode.html#a7245f0624c9db59574846d5c2903e6cb',1,'org::vaultit::mobilesso::mobilessosdk::SessionError::ErrorCode']]],
+  ['init_5fno_5fsession_5ferror',['INIT_NO_SESSION_ERROR',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionError_1_1ErrorCode.html#ac275a9bcbf4cf09ca43060851e9f0ebe',1,'org::vaultit::mobilesso::mobilessosdk::SessionError::ErrorCode']]],
+  ['init_5fservice_5fconfig_5fload_5ferror',['INIT_SERVICE_CONFIG_LOAD_ERROR',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionError_1_1ErrorCode.html#a4d573474d481d0400e33648dd4a08132',1,'org::vaultit::mobilesso::mobilessosdk::SessionError::ErrorCode']]],
+  ['initialize',['initialize',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a97d5d056eb3a2dc5cf0f0fe5dcbdbeb8',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
+  ['initialized',['initialized',['../interfaceorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager_1_1SessionListener.html#a1fb7f72bed6ab9f81cdb817343c00d02',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager::SessionListener']]],
+  ['inum',['inum',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#acedde081bbf86f11604a9e2e26122fd8',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
+  ['isauthorized',['isAuthorized',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html#a577343f885dbddbc76f129383ce8153b',1,'org::vaultit::mobilesso::mobilessosdk::Session']]],
+  ['isinitialized',['isInitialized',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a83e3d4127d56999ccc6cc91e20f9a3c1',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
+  ['isonline',['isOnline',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html#a7326c46ca0102b490759c17c44e49284',1,'org::vaultit::mobilesso::mobilessosdk::Session']]],
+  ['iss',['iss',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a0cd625d510eb16edfb296380fadcc0db',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
+  ['isvalid',['isValid',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a6650a809d69a165ce245a2e2a8a7add6',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]]
 ];

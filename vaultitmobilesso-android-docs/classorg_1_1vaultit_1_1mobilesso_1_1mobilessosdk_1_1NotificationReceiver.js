@@ -1,0 +1,4 @@
+var classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1NotificationReceiver =
+[
+    [ "EventType", "enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1NotificationReceiver_1_1EventType.html", "enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1NotificationReceiver_1_1EventType" ]
+];

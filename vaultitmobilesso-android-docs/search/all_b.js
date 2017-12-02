@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['redirecturireceiveractivity',['RedirectUriReceiverActivity',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1_redirect_uri_receiver_activity.html',1,'org::vaultit::mobilesso::mobilessosdk']]],
-  ['refreshsession',['refreshSession',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1_session_manager.html#a4f07a62dcd5c8624210e3f0fe66e041c',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
-  ['registerforevent',['registerForEvent',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1_session_manager.html#af9c4361720450e33fe9baf2336c558cc',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
-  ['removesessionlistener',['removeSessionListener',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1_session_manager.html#a914d8db2dde204c52f8a9f5b42539aa7',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]]
+  ['name',['name',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a351ea2df29f789ac1cc6a716c3b8e305',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
+  ['no_5fsession',['NO_SESSION',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session_1_1SessionStatus.html#a1c88747338b18413901541a5bd734b2b',1,'org::vaultit::mobilesso::mobilessosdk::Session::SessionStatus']]],
+  ['notification',['notification',['../interfaceorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager_1_1SessionListener.html#a0764bc936e99fc4f39a9b4332c1d3e4a',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager::SessionListener']]],
+  ['notificationreceiver',['NotificationReceiver',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1NotificationReceiver.html',1,'org::vaultit::mobilesso::mobilessosdk']]]
 ];
