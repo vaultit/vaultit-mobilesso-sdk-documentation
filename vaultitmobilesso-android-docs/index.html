@@ -104,177 +104,85 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="textblock"><h2>Configuration</h2>
 <p>First part of the configuration is the adding the library to the Android-project. Then configuring the OpenID Client settings and the OpenID Connect Provider Discovery URL, some of the client information you'll receive when you register your application.</p>
 <h3>Installation</h3>
-<h4>Required Libraries</h4>
-<p>Create new Android-project. Add flatDirs-configuration to the repositories-section of the top-level build.gradle-file: </p><pre class="fragment">allprojects {
-    repositories {
-        jcenter()
-        flatDir {
-            dirs 'libs'
-        }
-    }
-}
-</pre><p>Compile the mobilessosdk library by typing (or alternatively use Android Studio to build): </p><pre class="fragment">./gradlew assembleRelease
-</pre><p>Copy the resulting <em>vaultit-mobilessosdk-X.Y.Z-release.aar</em> from the distribution package (found in *./mobilessosdk/build/outputs/aar/*) to your application's */libs* directory. Then add it and the <a href="https://github.com/openid/AppAuth-Android" title="AppAuth Android library">AppAuth</a> library as a dependency to the application build.gradle-file ( app/build.gradle ): </p><pre class="fragment">implementation(name:'vaultit-mobilessosdk-X.Y.Z-release', ext:'aar')
-implementation 'net.openid:appauth:0.7.0'
-</pre><h4>Android Permissions</h4>
-<p>The following permissions are used by the library: </p><pre class="fragment">"android.permission.INTERNET"
-"android.permission.ACCESS_NETWORK_STATE"
-</pre><h4>Redirect Schemes</h4>
-<p>It is recommended to use custom redirect schemes with both libraries for getting a response intent back to your application from the SSO browser. The schemes should use reverse DNS notation to guarantee uniqueness. Here is an example application build.gradle configuration for AppAuth:</p>
-<pre class="fragment">android.defaultConfig.manifestPlaceholders = [
-  'appAuthRedirectScheme': 'com.example.app.auth'
-]
-</pre><p>It seems that if defining the redirect URI directly in the activity's intent filter (see below), the manifestPlaceholder is only needed for compilation reasons (it will be overriden by the value in AndroidManifest).</p>
+<h4>Flat library structure</h4>
+<p>Create new Android-project. Add a flatDir configuration to the repositories section of the top-level build.gradle-file, inside the allprojects -&gt; repositories declaration:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;allprojects {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    repositories {</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;        jcenter()</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;        // Paste this here</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        flatDir {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;            dirs &#39;libs&#39;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        }</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    }</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div></div><!-- fragment --><h4>Add the AAR file to the project</h4>
+<p>You can get the required .aar file by:</p><ul>
+<li>Downloading a precompiled binary release</li>
+<li>Building the .aar file with gradlew</li>
+<li>Building the .aar file with Android Studio</li>
+</ul>
+<p>To compile the library from the terminal, run the following gradlew command:</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;./gradlew assembleRelease</div></div><!-- fragment --><p>To build the library from Android Studio:</p><ul>
+<li>Highlight the "mobilessosdk" target from the project structure.</li>
+<li>From the bottom left, activate the "Build variants" tab, and ensure "Release" configuration is selected for the mobilessosdk target.</li>
+<li>From the top bar, choose Build -&gt; Make module 'mobilessosdk'</li>
+</ul>
+<p>Copy the resulting <em>vaultit-mobilessosdk-X.Y.Z-release.aar</em> from the distribution package (found in *./mobilessosdk/build/outputs/aar/*) to your application's <em>app/libs/</em> directory.</p>
+<p>In addition, you will need to add some libraries that the mobilessosdk depends on:</p><ul>
+<li><a href="https://github.com/openid/AppAuth-Android" title="AppAuth Android library">AppAuth</a></li>
+<li><a href="https://github.com/google/gson" title="google-gson">Gson</a></li>
+</ul>
+<p>to the application build.gradle-file (app/build.gradle):</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;implementation(name:&#39;vaultit-mobilessosdk-X.Y.Z-release&#39;, ext:&#39;aar&#39;)</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;implementation &#39;net.openid:appauth:0.7.0&#39;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;implementation &#39;com.google.code.gson:gson:2.8.0&#39;</div></div><!-- fragment --><p> GSON is only needed if your application e.g. deserializes the <em>SessionError</em> class.</p>
+<h4>Android Permissions</h4>
+<p>Add the following permissions to the AndroidManifest.xml file (under "&lt;manifest&gt;"):</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;<span class="keywordtype">permission</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.permission.INTERNET&quot;</span>/&gt;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;&lt;<span class="keywordtype">permission</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.permission.ACCESS_NETWORK_STATE&quot;</span>/&gt;</div></div><!-- fragment --><h4>Redirect Schemes</h4>
+<p>It is recommended to use custom redirect schemes with both libraries for getting a response intent back to your application from the SSO browser. The schemes should use reverse DNS notation to guarantee uniqueness. Here is an example application build.gradle configuration for AppAuth (add this app/build.gradle, under the android.defaultConfig property):</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;android.defaultConfig.manifestPlaceholders = [</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    &#39;appAuthRedirectScheme&#39;: &#39;com.example.app.auth&#39;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;]</div></div><!-- fragment --><p>It seems that if defining the redirect URI directly in the activity's intent filter (see below), the manifestPlaceholder is only needed for compilation reasons (it will be overriden by the value in AndroidManifest).</p>
 <p>In the application's AndroidManifest.xml, the following is needed:</p>
-<pre class="fragment">    &lt;activity
-        android:name="net.openid.appauth.RedirectUriReceiverActivity"
-        android:launchMode="standard"
-        tools:node="replace"&gt;
-        &lt;intent-filter&gt;
-            &lt;action android:name="android.intent.action.VIEW" /&gt;
-            &lt;category android:name="android.intent.category.DEFAULT" /&gt;
-            &lt;category android:name="android.intent.category.BROWSABLE" /&gt;
-            &lt;data android:scheme="com.example.app.auth" /&gt;
-        &lt;/intent-filter&gt;
-    &lt;/activity&gt;
-
-
-    &lt;activity android:name="org.vaultit.mobilesso.mobilessosdk.LogoutRedirectUriActivity"&gt;
-        &lt;intent-filter&gt;
-            &lt;action android:name="android.intent.action.VIEW" /&gt;
-            &lt;category android:name="android.intent.category.DEFAULT" /&gt;
-            &lt;category android:name="android.intent.category.BROWSABLE" /&gt;
-            &lt;data android:scheme="com.example.app.logout" /&gt;
-        &lt;/intent-filter&gt;
-    &lt;/activity&gt;
-</pre><p>The schemes for authentication and logout need to be different and unique within the Android device, otherwise the Android OS cannot know where to send the intent. Also, the redirect scheme should be a subset of the redirect URI (see next section), e.g. if scheme is "com.example.app.auth", then URI could be e.g. "com.example.app.auth://oidc_callback".</p>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;&lt;<span class="keywordtype">activity</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="keyword">android:name</span>=<span class="stringliteral">&quot;net.openid.appauth.RedirectUriReceiverActivity&quot;</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keyword">android:launchMode</span>=<span class="stringliteral">&quot;standard&quot;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">tools:node</span>=<span class="stringliteral">&quot;replace&quot;</span>&gt;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    &lt;<span class="keywordtype">intent-filter</span>&gt;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        &lt;<span class="keywordtype">action</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.intent.action.VIEW&quot;</span> /&gt;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        &lt;<span class="keywordtype">category</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.intent.category.DEFAULT&quot;</span> /&gt;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        &lt;<span class="keywordtype">category</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.intent.category.BROWSABLE&quot;</span> /&gt;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        &lt;<span class="keywordtype">data</span> <span class="keyword">android:scheme</span>=<span class="stringliteral">&quot;com.example.app.auth&quot;</span> /&gt;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    &lt;/<span class="keywordtype">intent-filter</span>&gt;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;&lt;/<span class="keywordtype">activity</span>&gt;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;&lt;<span class="keywordtype">activity</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;org.vaultit.mobilesso.mobilessosdk.LogoutRedirectUriActivity&quot;</span>&gt;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    &lt;<span class="keywordtype">intent-filter</span>&gt;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        &lt;<span class="keywordtype">action</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.intent.action.VIEW&quot;</span> /&gt;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        &lt;<span class="keywordtype">category</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.intent.category.DEFAULT&quot;</span> /&gt;</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        &lt;<span class="keywordtype">category</span> <span class="keyword">android:name</span>=<span class="stringliteral">&quot;android.intent.category.BROWSABLE&quot;</span> /&gt;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        &lt;<span class="keywordtype">data</span> <span class="keyword">android:scheme</span>=<span class="stringliteral">&quot;com.example.app.logout&quot;</span> /&gt;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    &lt;/<span class="keywordtype">intent-filter</span>&gt;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;&lt;/<span class="keywordtype">activity</span>&gt;</div></div><!-- fragment --><p>The schemes for authentication and logout need to be different and unique within the the apps installed in the user's Android device, otherwise the Android OS cannot know where to send the intent (and will ask). Also, the redirect scheme should be a subset of the redirect URI (see next section), e.g. if scheme is "com.example.app.auth", then URI could be e.g. "com.example.app.auth://oidc_callback".</p>
 <h3>OpenID Connect Provider settings</h3>
 <p>The library has a <em>IdentityProvider</em> class, which is used to encapsulate OpenID Connect provider settings. Client id and client secret are issued when registering your application and OpenID Connect Discovery URL is the providers discovery URL for the environment. The <em>Getting started with VaultITMobileSSOFramework</em> document has the discovery URL endpoints for different environments.</p>
 <p>Below is the information that is needed to construct <em>IdentityProvider</em>. Most of the information the application provider receives upon registering its application for Nordic eID.</p>
 <ul>
 <li>discoveryEndpoint (environment's OpenID Connect Provider Discovery URL), e.g. "https://nordic-eid-gluu.qvarnlabs.net/.well-known/openid-configuration"</li>
 <li>clientId (app client id, generated when registering an application for Nordic eID), e.g. "@!2027.831B.4505.5985!0001!200B.B5FE!0008!74EE.DE66"</li>
-<li>clientSecret (app client secret, generated when registering an application for Nordic eID), e.g. "epbqEmD3AkROCdPsxBSe"</li>
+<li>clientSecret (app client secret, generated when registering an application for Nordic eID), e.g. "12345abcdef"</li>
 <li>redirectUri (app redirect URL after login), e.g. "com.example.virtualcard.auth://oidc_callback"</li>
 <li>logoutRedirectUri (app redirect URL after logout), e.g. "com.example.virtualcard.logout://oidc_callback"</li>
-<li>scope (OpenID scopes for application. See the <em>Getting started with VaultITMobileSSOFramework</em> document for the list of available scopes), e.g. "openid profile email vcbe_virtual_cards_post vcbe_virtual_cards_delete gluu_fido_u2f_revoke"</li>
+<li>scope (OpenID scopes for application. See the <em>Getting started with VaultITMobileSSOFramework</em> document for the list of available scopes), e.g. "openid profile email custom_backend_scope"</li>
 </ul>
+<p>Usually, the best course of action is to initialize one instance of IdentityProvider and use it for every SessionManager you initialize (see the examples in this document).</p>
 <h2>Basic VaultITMobileSSOFramework usage</h2>
 <p>Below are instructions how to use the VaultITMobileSSOFramework in Android application. Implement <em>SessionManager.SessionListener</em> in your activity class and construct the <em>SessionManager</em> class. The <em>IdentityProvider</em> class is used to pass on the the OpenID Connect Provider and client settings to the Session Manager.</p>
 <h3>Initialization</h3>
 <p>The SessionManager needs to be created when the activity starts up. The activity context and IdentityProvider objects are given as parameters. Then initialize() must be called. Initialization will fetch information from the OpenID Connect provider discovery endpoint and load previously stored session data.</p>
-<pre class="fragment">    @Override
-    protected void onCreate(Bundle savedInstanceState)  {
-        ....
-        mSessionManager  = new SessionManager(this,mIdentityProvider);
-        if (!mSessionManager.isInitialized()) {
-            mSessionManager.initialize();
-        }
-        ....
-    }
-</pre><p>Here is a sample SessionListener.initialized() callback: </p><pre class="fragment">public void initialized(@Nullable Session session, @Nullable SessionError error) {
-    if (session != null) {   // ie. refresh token is valid
-        if (session.isOnline()) {  
-            // no need for refresh, since initialize has already done that
-            fetchPerson();
-        } else {
-            // offline
-            ...
-        }
-    } else if (error != null) {
-        Log.e(TAG,"initialized(): failed to initialize session error=" + 
-            error.getErrorMessage());
-    }
-}
-</pre><h3>SessionListener</h3>
+<div class="fragment"><div class="line">@Override</div><div class="line"><span class="keyword">protected</span> <span class="keywordtype">void</span> onCreate(Bundle savedInstanceState)  {</div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    mSessionManager = <span class="keyword">new</span> SessionManager(<span class="keyword">this</span>, mIdentityProvider);</div><div class="line"></div><div class="line">    <span class="keywordflow">if</span> (!mSessionManager.isInitialized()) {</div><div class="line">        mSessionManager.initialize();</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><h3>SessionListener</h3>
 <p>The framework comes with <em>SessionListener</em> interface (<a class="el" href="interfaceorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager_1_1SessionListener.html">org.vaultit.mobilesso.mobilessosdk.SessionManager.SessionListener</a>). Implement the interface in the application to receive notifications and changes to session status.</p>
-<p>To initialize listening to events, place the <em>addSessionListener()</em> call to <em>onStart()</em>: </p><pre class="fragment">protected void onStart() {
-    ...
-    mSessionManager.addSessionListener(mContext);
-    ....
-}
-</pre><p>To terminate listening to events, place the <em>removeSessionListener()</em> call to <em>onStop()</em>: </p><pre class="fragment">protected void onStop() {
-    ...
-    mSessionManager.removeSessionListener(this);
-    ...
-}
-</pre><p>The <em>SessionListener.notification()</em> callback is different, it will be activated by calling <em>registerForEvent()</em> and unregistered by calling <em>unregisterAllEvents()</em>. The idea behind this is to receive events outside of onStart()/onStop() time frame. This is useful e.g. for finishing an Activity after a logout or login.</p>
-<h3><a class="anchor" id="executor"></a>Executor</h3>
-<p>Use e.g. <a href="https://developer.android.com/reference/java/util/concurrent/Executors.html">Executors</a> to launch jobs in separate threads. Quick example: </p><pre class="fragment">    private ExecutorService mExecutor;
-    ....
-    if (mExecutor.isShutdown()) {
-      mExecutor = Executors.newSingleThreadExecutor();
-    }
-    ...
-    mSessionManager.getFreshSession(new SessionManager.TokenRefreshCallback() {
-        @Override
-        public void tokenRefreshCallback(
-                @Nullable Session session,
-                @Nullable SessionError error) {
-            if (error != null) {
-                Log.e(TAG, "failed to refresh token, err=" + error.getErrorMessage());
-            } else {
-                Log.d(TAG, "token fetch succeeded");
-                mExecutor.execute(new Runnable() {
-                    public void run() {
-                        readPhoto();  // this function performs network access
-                    }
-                });
-            }
-        }
-    });
-</pre><p>SSO (single sign-on) library calls do not need to be called in a separate worker thread, although they may spawn threads themselves when running. All SSO library callbacks will be called in the main/UI thread. In the above example, the SSO callback tokenRefreshCallback() is called in the main/UI thread context, and thus the networking code in readPhoto() requires that mExecutor is used to run it in a separate worker thread.</p>
+<p>To initialize listening to events, place the <em>addSessionListener()</em> call to <em>onStart()</em>:</p>
+<div class="fragment"><div class="line"><span class="keyword">protected</span> <span class="keywordtype">void</span> onStart() {</div><div class="line">    mSessionManager.addSessionListener(mContext);</div><div class="line">}</div></div><!-- fragment --><p>To terminate listening to events, place the <em>removeSessionListener()</em> call to <em>onStop()</em>:</p>
+<div class="fragment"><div class="line"><span class="keyword">protected</span> <span class="keywordtype">void</span> onStop() {</div><div class="line">    mSessionManager.removeSessionListener(<span class="keyword">this</span>);</div><div class="line">}</div></div><!-- fragment --><p>Here is a sample SessionListener.initialized() callback required to detect persisted sessions:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> initialized(@Nullable Session session, @Nullable SessionError sessionError) {</div><div class="line">    <span class="keywordflow">if</span> (session != null) {   <span class="comment">// ie. refresh token is valid</span></div><div class="line">        <span class="keywordflow">if</span> (session.isOnline()) {</div><div class="line">            <span class="comment">// no need for refresh, since initialize has already done that</span></div><div class="line">            fetchPerson();</div><div class="line">        } <span class="keywordflow">else</span> {</div><div class="line">            <span class="comment">// offline</span></div><div class="line">        }</div><div class="line">    }</div><div class="line">    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (sessionError != null) {</div><div class="line">        Log.e(TAG,<span class="stringliteral">&quot;initialized(): failed to initialize session error=&quot;</span> +</div><div class="line">        sessionError.getErrorMessage());</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><p>The <em>SessionListener.notification()</em> callback is different, it will be activated by calling <em>registerForEvent()</em> and unregistered by calling <em>unregisterAllEvents()</em>. The idea behind this is to receive events outside of onStart()/onStop() time frame. This is useful e.g. for finishing an Activity after a logout or login.</p>
 <h3>Authenticating the user</h3>
-<p>The Nordic eID supports multiple different authentication method. Currently they are bankid (for Swedish users), tupas (for Finnish users) and internal (general username/password). You can define the used ACR by giving <em>Map&lt;String,String&gt; additionalParams</em> as a parameter to the authorize-function. The map should have a key <em>acr_values</em> with one of the following values:</p>
+<p>The Nordic eID supports multiple different authentication methods. Currently they are BankID (for Swedish users), TUPAS (for Finnish users) and internal method (general username/password). You can define the used ACR by giving <em>Map&lt;String,String&gt; additionalParams</em> as a parameter to the authorize() function. The map should have a key <em>acr_values</em> with one of the following values:</p>
 <ul>
 <li>"internal" (default)</li>
 <li>"tupas"</li>
 <li>"bankid"</li>
 </ul>
-<p>Authentication process will redirect the user to the OpenID Connect Providers authentication process. It will use the system browser to achieve SSO (single sign-on) between different applications. After successful authentication and token exchange, the VaultITMobileSSOFramework will redirect to the given application's Intent (given as parameter). Use the method: </p><pre class="fragment">public void authorize(Context context, Intent tokenResponseIntent, Map&lt;String,String&gt; additionalParams)
-</pre><p>to start the authentication process. Here is an example of a call: </p><pre class="fragment">    Intent intent = new Intent(this, MainActivity.class);
-    intent.putExtra(INTENT_EXTRA_AUTH_CALLBACK, true);
-    HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
-    map.put("acr_values","internal");
-    mSessionManager.authorize(mContext, intent, map);
-</pre><p>to receive the callback intent in MainActivity: </p><pre class="fragment">void onCreate() {
-    ...
-    if (intent.hasExtra(INTENT_EXTRA_AUTH_CALLBACK)) {
-        if (!intent.hasExtra(SessionManager.KEY_SESSION_ERROR_JSON) {
-            session = mSessionManager.getSession()
-            if (session.getStatus() == SessionStatus.VALID &amp;&amp; session.isOnline()) {
-               // successful authentication, now fetch some data...
-            }
-        } else {
-            // handle error
-        }
-    }
-}
-</pre><h3>Checking for an existing SSO session</h3>
-<p>This will typically be done at the start of the application, to see if an authentication procedure is needed. If not, ie. the browser still has a valid cookie for the previous authentication session, the <em>authorized(prompt=none)</em> call will return with success, as shown above. If failure, <em>authorize()</em> needs to be called again without the "prompt=none" parameter. Here is an example of a session check call: </p><pre class="fragment">    HashMap&lt;String, String&gt; map = new HashMap&lt;&gt;();
-    map.put("prompt","none");
-    mSessionManager.authorize(mContext, intent, map);
-</pre><p>The mechanism for passing the prompt-parameter is the same as for the acr_values shown above.</p>
-<h3>Logout</h3>
-<p>Logout method will remove the user's login session. It will first refresh the access token, in an attempt to ensure the success of the logout operation. The actual logout will be performed with the system browser and it is redirected back to the application using the Intent that was given as a parameter (similar to the <em>authorize()</em> call). Call </p><pre class="fragment">public void logout(final Intent intent)
-</pre><p>to start the logout process. After calling <em>logout()</em>, the application needs to call <em>initialize()</em>, since all session data will be deleted.</p>
+<p>Authentication process will redirect the user to the OpenID Connect Providers authentication process. It will use the system browser to achieve SSO (single sign-on) between different applications. After successful authentication and token exchange, the VaultITMobileSSOFramework will redirect to the given application's Intent (given as parameter). Use the sessionManager.authorize() method</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> authorize(Context context, Intent tokenResponseIntent, Map&lt;String,String&gt; additionalParams)</div></div><!-- fragment --><p>to start the authentication process. Here is an example call:</p>
+<div class="fragment"><div class="line">Intent intent = <span class="keyword">new</span> Intent(<span class="keyword">this</span>, MainActivity.class);</div><div class="line">intent.putExtra(<span class="stringliteral">&quot;login_intent_extra&quot;</span>, <span class="keyword">true</span>);</div><div class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">map.put(<span class="stringliteral">&quot;acr_values&quot;</span>, <span class="stringliteral">&quot;internal&quot;</span>);</div><div class="line"></div><div class="line">mSessionManager.authorize(mContext, intent, map);</div></div><!-- fragment --><p>And here is an example to receive the callback intent in MainActivity:</p>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> onCreate() {</div><div class="line">    Intent intent = getIntent();</div><div class="line">    sessionManager = <span class="keyword">new</span> SessionManager(<span class="keyword">this</span>, MyApplication.getInstance().getIdentityProvider());</div><div class="line"></div><div class="line">    <span class="keywordflow">if</span> (intent.hasExtra(<span class="stringliteral">&quot;login_intent_extra&quot;</span>)) {</div><div class="line">        <span class="keywordflow">if</span> (!intent.hasExtra(SessionManager.KEY_SESSION_ERROR_JSON)) {</div><div class="line">            Session session = sessionManager.getSession();</div><div class="line"></div><div class="line">            <span class="keywordflow">if</span> (session.getStatus() == Session.SessionStatus.VALID &amp;&amp; session.isOnline()) {</div><div class="line">                <span class="comment">// successful authentication, now fetch some data...</span></div><div class="line">            } <span class="keywordflow">else</span> {</div><div class="line">                <span class="comment">// handle error</span></div><div class="line">            }</div><div class="line">        }</div><div class="line">    }</div><div class="line">}</div></div><!-- fragment --><h3>Checking for an existing SSO session</h3>
+<p>This will typically be done at the start of the application, to see if an authentication procedure is needed. If not, ie. the browser still has a valid cookie for the previous authentication session, the <em>authorized(prompt=none)</em> call will return with success, as shown above. If failure, <em>authorize()</em> needs to be called again without the "prompt=none" parameter. Here is an example of a session check call:</p>
+<div class="fragment"><div class="line">HashMap&lt;String, String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</div><div class="line">map.put(<span class="stringliteral">&quot;prompt&quot;</span>,<span class="stringliteral">&quot;none&quot;</span>);</div><div class="line"></div><div class="line">mSessionManager.authorize(mContext, intent, map);</div></div><!-- fragment --><p>The mechanism for passing the prompt-parameter is the same as for the acr_values shown above.</p>
+<p>Alternatively, you can use the convenience function:</p>
+<div class="fragment"><div class="line">mSessionManager.performSessionCheck(mContext, intent);</div></div><!-- fragment --><h3>Logout</h3>
+<p>Logout method will remove the user's login session. It will first refresh the access token, in an attempt to ensure the success of the logout operation. The actual logout will be performed with the system browser and it is redirected back to the application using the Intent that was given as a parameter (similar to the <em>authorize()</em> call). Call</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> logout(<span class="keyword">final</span> Intent intent)</div></div><!-- fragment --><p>to start the logout process. After calling <em>logout()</em>, the application needs to call <em>initialize()</em>, since all session data will be deleted.</p>
 <h3>Refresh tokens</h3>
-<p>The access token's expiration time is relatively short (currently e.g. 4h). After it has expired, a fresh access token can be requested by the calling method: </p><pre class="fragment">public void getFreshSession(TokenRefreshCallback callback)
-</pre><p>This will renew access token and ID token from OpenID Connect Provider. See the example in section <a href="#executor">Executor</a></p>
+<p>The access token's expiration time is relatively short (currently e.g. 4h). After it has expired, a fresh access token can be requested by the calling method:</p>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> getFreshSession(TokenRefreshCallback callback)</div></div><!-- fragment --><p>This will renew access token and ID token from OpenID Connect Provider. Here is an example, which uses <em>Executor</em> for threading:</p>
+<div class="fragment"><div class="line">mSessionManager.getFreshSession(<span class="keyword">new</span> SessionManager.TokenRefreshCallback() {</div><div class="line">    @Override</div><div class="line">    <span class="keyword">public</span> <span class="keywordtype">void</span> tokenRefreshCallback(</div><div class="line">            @Nullable Session session,</div><div class="line">            @Nullable SessionError error) {</div><div class="line">        <span class="keywordflow">if</span> (error != null) {</div><div class="line">            Log.e(TAG, <span class="stringliteral">&quot;failed to refresh token, err=&quot;</span> + error.getErrorMessage());</div><div class="line">        } <span class="keywordflow">else</span> {</div><div class="line">            Log.d(TAG, <span class="stringliteral">&quot;token fetch succeeded&quot;</span>);</div><div class="line">            mExecutor.execute(<span class="keyword">new</span> Runnable() {</div><div class="line">                <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div><div class="line">                    readPhoto();  <span class="comment">// this function performs network access</span></div><div class="line">                }</div><div class="line">            });</div><div class="line">        }</div><div class="line">    }</div><div class="line">});</div></div><!-- fragment --><p>SSO (single sign-on) library calls do not need to be called in a separate worker thread, although they may spawn threads themselves when running. All SSO library callbacks will be called in the main/UI thread. In the above example, the SSO callback tokenRefreshCallback() is called in the main/UI thread context, and thus the networking code in readPhoto() requires that mExecutor is used to run it in a separate worker thread.</p>
 <h3>Authentication status</h3>
-<p>By implementing the <em>SessionListener</em> and registering the listener, the application will receive changes to the session status. In addition to this, the application can get an instance of the session by calling </p><pre class="fragment">Session session = mSessionManager.getSession()
-</pre><p>to obtain authentication session state information. </p><pre class="fragment">if (session.getStatus() == SessionStatus.VALID) {
-    ...
-}
-</pre><p>or to retrieve the access token: </p><pre class="fragment">String accessToken = session.getAccessToken();
-</pre><p>The session object is "live", ie. its state will be updated as the session state changes.</p>
+<p>By implementing the <em>SessionListener</em> and registering the listener, the application will receive changes to the session status. In addition to this, the application can get an instance of the session by calling</p>
+<div class="fragment"><div class="line">Session session = mSessionManager.getSession()</div></div><!-- fragment --><p>to obtain authentication session state information.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span> (session.getStatus() == SessionStatus.VALID) {</div><div class="line">    <span class="comment">// ...</span></div><div class="line">}</div></div><!-- fragment --><p>or to retrieve the access token:</p>
+<div class="fragment"><div class="line">String accessToken = session.getAccessToken();</div></div><!-- fragment --><p>The session object is "live", ie. its state will be updated as the session state changes.</p>
 <h3>Sample Activity onDestroy()</h3>
-<p>Herre is a sample Activity onDestroy() method, to remind you of what needs to be called there in most cases. </p><pre class="fragment">protected void onDestroy() {
-    ...
-    mSessionManager.unregisterAllEvents();  // needed only if registered for login/logout events
-    mSessionManager.dispose();
-}
-</pre><h3>Claims available in Session</h3>
+<p>Herre is a sample Activity onDestroy() method, to remind you of what needs to be called there in most cases.</p>
+<div class="fragment"><div class="line"><span class="keyword">protected</span> <span class="keywordtype">void</span> onDestroy() {</div><div class="line">    ...</div><div class="line">    mSessionManager.unregisterAllEvents();  <span class="comment">// needed only if registered for login/logout events</span></div><div class="line">    mSessionManager.dispose();</div><div class="line">}</div></div><!-- fragment --><h3>Claims available in Session</h3>
 <p>You can extract all the claims from the Session object by calling <em>Session.getIdTokenPayload()</em>, which will return an <em>IdTokenPayload</em> object, which has public access to claims, such as iat, exp, auth_time, iss, aud, sub, etc.</p>
 <h2>Known issues</h2>
 <h2>License</h2>
