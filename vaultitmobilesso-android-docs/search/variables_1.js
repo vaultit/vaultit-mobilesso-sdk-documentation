@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['exp',['exp',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a0db640f7399526ab84341c16132ea94a',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
-  ['expired',['EXPIRED',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session_1_1SessionStatus.html#a57869e26a612d533c1d750e3f85dd932',1,'org::vaultit::mobilesso::mobilessosdk::Session::SessionStatus']]]
+  ['card_5fid',['card_id',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1VaultitCardNumber.html#a0f6480b1d901e959ae9d32279d93a370',1,'org::vaultit::mobilesso::mobilessosdk::data::VaultitCardNumber']]],
+  ['card_5fid_5ftype',['card_id_type',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1VaultitCardNumber.html#adb164e7e80d789886ede6abe18ee1016',1,'org::vaultit::mobilesso::mobilessosdk::data::VaultitCardNumber']]],
+  ['country',['country',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1VaultitGovOrgId.html#aa14933b5ee133ce315b68dafa5d8cbdd',1,'org.vaultit.mobilesso.mobilessosdk.data.VaultitGovOrgId.country()'],['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1VaultitGovId.html#a51a271796ca6c55b4127a409fe6f87ff',1,'org.vaultit.mobilesso.mobilessosdk.data.VaultitGovId.country()']]]
 ];

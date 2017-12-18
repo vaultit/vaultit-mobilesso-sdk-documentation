@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['scope',['Scope',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1IdTokenPayload_1_1Scope.html',1,'org::vaultit::mobilesso::mobilessosdk::data::IdTokenPayload']]],
   ['session',['Session',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html',1,'org::vaultit::mobilesso::mobilessosdk']]],
   ['sessionerror',['SessionError',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionError.html',1,'org::vaultit::mobilesso::mobilessosdk']]],
   ['sessionlistener',['SessionListener',['../interfaceorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager_1_1SessionListener.html',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],

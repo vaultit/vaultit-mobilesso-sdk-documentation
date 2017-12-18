@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['oxopenidconnectversion',['oxOpenIDConnectVersion',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a0cf93114751f7cd75a9f3d74409a9f18',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]],
-  ['oxvalidationuri',['oxValidationURI',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#ac206b71ff30ae5fcbdab87f889ea233a',1,'org::vaultit::mobilesso::mobilessosdk::IdTokenPayload']]]
+  ['name',['name',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1IdTokenPayload.html#a23a59c0bc52adbada4ece4838f247a55',1,'org::vaultit::mobilesso::mobilessosdk::data::IdTokenPayload']]],
+  ['no_5fsession',['NO_SESSION',['../enumorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session_1_1SessionStatus.html#a1c88747338b18413901541a5bd734b2b',1,'org::vaultit::mobilesso::mobilessosdk::Session::SessionStatus']]]
 ];

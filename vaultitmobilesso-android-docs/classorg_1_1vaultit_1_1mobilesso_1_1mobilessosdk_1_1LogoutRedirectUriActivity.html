@@ -129,19 +129,72 @@ Collaboration diagram for org.vaultit.mobilesso.mobilessosdk.LogoutRedirectUriAc
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a8b5049877e2125bf09f3d36d9265687b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8b5049877e2125bf09f3d36d9265687b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onCreate</b> (Bundle savedInstanceBundle)</td></tr>
+<tr class="memitem:a8b5049877e2125bf09f3d36d9265687b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1LogoutRedirectUriActivity.html#a8b5049877e2125bf09f3d36d9265687b">onCreate</a> (Bundle savedInstanceBundle)</td></tr>
 <tr class="separator:a8b5049877e2125bf09f3d36d9265687b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7019bbf1c2c9df951c728e201ae482a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7019bbf1c2c9df951c728e201ae482a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>onDestroy</b> ()</td></tr>
+<tr class="memitem:a7019bbf1c2c9df951c728e201ae482a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1LogoutRedirectUriActivity.html#a7019bbf1c2c9df951c728e201ae482a7">onDestroy</a> ()</td></tr>
 <tr class="separator:a7019bbf1c2c9df951c728e201ae482a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Activity that receives the redirect Uri sent by the OpenID endpoint. This activity gets launched when the logout completes with Intent given in <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a4b3c643807238c9ccc0414825f06aa20">SessionManager::logout()</a>.</p>
+<div class="textblock"><p>Activity that receives the redirect Uri sent by the OpenID endpoint. This activity gets launched when the logout completes with Intent given in <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a7547db7543773e76b9135b5f98936d07">SessionManager::logout()</a>.</p>
 <p>App developers using this library <em>must</em> register this activity in the manifest with one intent filter for each redirect URI they are intending to use.</p>
 <pre>
 <div class="fragment"><div class="line">&lt; intent-filter&gt;</div><div class="line">  &lt; action android:name=<span class="stringliteral">&quot;android.intent.action.VIEW&quot;</span>/&gt;</div><div class="line">  &lt; category android:name=<span class="stringliteral">&quot;android.intent.category.DEFAULT&quot;</span>/&gt;</div><div class="line">  &lt; category android:name=<span class="stringliteral">&quot;android.intent.category.BROWSABLE&quot;</span>/&gt;</div><div class="line">  &lt; data android:scheme=<span class="stringliteral">&quot;REDIRECT_URI_SCHEME&quot;</span>/&gt;</div><div class="line">&lt; /intent-filter&gt;</div></div><!-- fragment --> 
-</pre> </div><hr/>The documentation for this class was generated from the following file:<ul>
+</pre> </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8b5049877e2125bf09f3d36d9265687b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void org.vaultit.mobilesso.mobilessosdk.LogoutRedirectUriActivity.onCreate </td>
+          <td>(</td>
+          <td class="paramtype">Bundle&#160;</td>
+          <td class="paramname"><em>savedInstanceBundle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>creates activity </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">savedInstanceBundle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7019bbf1c2c9df951c728e201ae482a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void org.vaultit.mobilesso.mobilessosdk.LogoutRedirectUriActivity.onDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>called when activity deleted </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>LogoutRedirectUriActivity.java</li>
 </ul>
 </div><!-- contents -->

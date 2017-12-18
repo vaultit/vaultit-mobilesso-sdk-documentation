@@ -131,7 +131,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adfc9e406f3c6f4ddb9e0585a7e203bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37c807fd0d65a9faf5195cdd7b567f64"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html#a37c807fd0d65a9faf5195cdd7b567f64">getIdToken</a> ()</td></tr>
 <tr class="separator:a37c807fd0d65a9faf5195cdd7b567f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aadc5fbd73b8491bd91c8107d59774624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html">IdTokenPayload</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html#aadc5fbd73b8491bd91c8107d59774624">getIdTokenPayload</a> ()</td></tr>
+<tr class="memitem:aadc5fbd73b8491bd91c8107d59774624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1IdTokenPayload.html">IdTokenPayload</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html#aadc5fbd73b8491bd91c8107d59774624">getIdTokenPayload</a> ()</td></tr>
 <tr class="separator:aadc5fbd73b8491bd91c8107d59774624"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c4275072b2ab4d4eab5a8889334b87"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html#a79c4275072b2ab4d4eab5a8889334b87">getScope</a> ()</td></tr>
 <tr class="separator:a79c4275072b2ab4d4eab5a8889334b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,7 +145,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad0ff3ee898a7ae926f6f76cd53f925a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html">Session</a> class reflects the ongoing state of the session, not just a snapshot. The information available includes access token, refresh token and id tokens. Additionally authorization state from AppAuth library, id token payload, scopes, session status and online status. The session object can be acquired by calling <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a0df0bd9a0993c758294938455b56fed5">SessionManager#getSession()</a> </p>
+<div class="textblock"><p>The <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1Session.html">Session</a> class reflects the ongoing state of the session, not just a snapshot. The information available includes access token, refresh token and id tokens. Additionally authorization state from AppAuth library, id token payload, scopes, session status and online status. The session object can be acquired by calling <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a0df0bd9a0993c758294938455b56fed5">SessionManager::getSession()</a> </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a89a7e7552a7fc96965750c6138d61459"></a>
 <div class="memitem">
@@ -223,7 +223,7 @@ Public Member Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html">IdTokenPayload</a> org.vaultit.mobilesso.mobilessosdk.Session.getIdTokenPayload </td>
+          <td class="memname"><a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1data_1_1IdTokenPayload.html">IdTokenPayload</a> org.vaultit.mobilesso.mobilessosdk.Session.getIdTokenPayload </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -278,7 +278,7 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Determines session status. If value returned is VALID, then tokens are in usable state, ie. refreshToken is valid and can be used to refresh the access token. If value returned is EXPIRED, then refresh token is expired, but browser's SSO session cookie might still be valid, in which case a new authentication is not needed. This can be checked by performing a "session check", which means calling <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#adba80a6b268fe103591639d904031be8">SessionManager#authorize()</a> with prompt=none.</p>
+<p>Determines session status. If value returned is VALID, then tokens are in usable state, ie. refreshToken is valid and can be used to refresh the access token. If value returned is EXPIRED, then refresh token is expired, but browser's SSO session cookie might still be valid, in which case a new authentication is not needed. This can be checked by performing a "session check", which means calling <a class="el" href="classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#ab9955adf6339fafb7c96bdcdaf19fe28">SessionManager::authorize()</a> with prompt=none.</p>
 <dl class="section return"><dt>Returns</dt><dd>returns one of: VALID | EXPIRED | NO_SESSION </dd></dl>
 
 </div>

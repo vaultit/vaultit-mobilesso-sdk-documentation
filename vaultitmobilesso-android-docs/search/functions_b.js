@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['serializetojson',['serializeToJson',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdTokenPayload.html#a30f4555de174ce28924d2716c0e6320e',1,'org.vaultit.mobilesso.mobilessosdk.IdTokenPayload.serializeToJson()'],['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1IdentityProvider.html#a971ba801ceb0387812e688be55b36050',1,'org.vaultit.mobilesso.mobilessosdk.IdentityProvider.serializeToJson()']]],
-  ['sessionmanager',['SessionManager',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a4a1824966cc28185e5d3449e8a9c9863',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
-  ['sessionreset',['sessionReset',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a639303bd3aa0fd58452acf630c97008f',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]]
+  ['refreshsession',['refreshSession',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a066cc13dba25c2694ca11c4cf8b0c25b',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
+  ['registerforevent',['registerForEvent',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#af9c4361720450e33fe9baf2336c558cc',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]],
+  ['removesessionlistener',['removeSessionListener',['../classorg_1_1vaultit_1_1mobilesso_1_1mobilessosdk_1_1SessionManager.html#a914d8db2dde204c52f8a9f5b42539aa7',1,'org::vaultit::mobilesso::mobilessosdk::SessionManager']]]
 ];
